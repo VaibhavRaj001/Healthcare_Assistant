@@ -25,7 +25,7 @@ def run(
     embedder_locator: str = "text-embedding-ada-002",
     embedding_dimension: int = 1536,
     model_locator: str = "gpt-3.5-turbo",
-    max_tokens: int = 300,
+    max_tokens: int = 500,
     temperature: float = 0.0,
 ):
     # Initialize OpenAI Embedder
