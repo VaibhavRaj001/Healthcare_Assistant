@@ -10,11 +10,11 @@ api_port = int(os.environ.get("PATHWAY_REST_CONNECTOR_PORT", 8080))
 
 st.title("Healthcare Assistant")
 
-# Initialize session state for chat messages
+
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# Function to handle document upload
+
 def upload_documents():
     uploaded_file = st.file_uploader("Upload documents (JSON Lines format)")
     if uploaded_file is not None:
@@ -23,7 +23,7 @@ def upload_documents():
         return documents
     return None
 
-# Function to handle user interaction and API request
+
 def handle_interaction():
     if prompt := st.text_input("Enter your query or message:"):
         with st.chat_message("user"):
@@ -44,7 +44,7 @@ def handle_interaction():
         else:
             st.error(f"Failed to send data. Status code: {response.status_code}")
 
-# Main application flow
+
 st.sidebar.title("Options")
 option = st.sidebar.radio("Choose an option:", ("Upload Documents", "Text Input"))
 
